@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Photos from "./Photos";
+import Photos from "./Photos/Photos";
 
 
 function App() {

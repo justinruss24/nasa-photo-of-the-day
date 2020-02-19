@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
+import Header from "../Header";
 import PhotoCard from "./PhotoCard";
 import axios from "axios";
 
