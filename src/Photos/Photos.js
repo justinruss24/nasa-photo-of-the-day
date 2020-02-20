@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import NavBar from "../NavBar";
 import Header from "../Header";
 import PhotoCard from "./PhotoCard";
 import axios from "axios";
@@ -8,6 +9,7 @@ import styled from 'styled-components';
 const CenterContent = styled.div `
   display: flex;
   align-items: center;
+  margin-top: 5%;
 `
 
 
@@ -29,10 +31,10 @@ export default function Photos() {
     }, []);
     return (
       <Container>
+        <NavBar />
         <Row>
           <CenterContent>
             <Header title={image.title} date={image.date} />
-            {/* {console.log(image)} */}
             <PhotoCard imgUrl={image.url} />
           </CenterContent>
         </Row>
