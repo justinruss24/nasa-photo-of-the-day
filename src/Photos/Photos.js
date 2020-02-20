@@ -34,7 +34,7 @@ export default function Photos() {
         <NavBar />
         <Row>
           <CenterContent>
-            <Header title={image.title} date={image.date} />
+            <Header title={image.title} date={image.date} description={image.explanation} />
             <PhotoCard imgUrl={image.url} />
           </CenterContent>
         </Row>
