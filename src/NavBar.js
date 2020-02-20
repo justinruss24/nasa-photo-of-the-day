@@ -8,7 +8,7 @@ const LogoFit = styled.img `
     width: 10%;
     height: 10%;
     object-fit: scale;
-    flex-shrink: 2;
+    flex-shrink: 1;
 `
 
 const Navigation = props => {
