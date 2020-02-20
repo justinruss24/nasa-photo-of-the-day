@@ -2,6 +2,14 @@ import React, { useState, useEffect } from "react";
 import Header from "../Header";
 import PhotoCard from "./PhotoCard";
 import axios from "axios";
+import { Container, Row } from "reactstrap";
+import styled from 'styled-components';
+
+const CenterContent = styled.div `
+  display: flex;
+  align-items: center;
+`
+
 
 export default function Photos() {
     const [image, setImage] = useState([]);
@@ -20,10 +28,14 @@ export default function Photos() {
           });
     }, []);
     return (
-      <div className="main-container">
-        <Header title={image.title} date={image.date}/>
-        {/* {console.log(image)} */}
-          <PhotoCard imgUrl={image.url} />
-      </div>
+      <Container>
+        <Row>
+          <CenterContent>
+            <Header title={image.title} date={image.date} />
+            {/* {console.log(image)} */}
+            <PhotoCard imgUrl={image.url} />
+          </CenterContent>
+        </Row>
+      </Container>
     );
 }
